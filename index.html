@@ -17,6 +17,34 @@
 
         <!-- JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module">
+            import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs"
+
+            // Start kaboom
+            kaboom({
+                background: [ 0, 200, 255 ],
+            })
+
+            const SPEED = 300
+
+            onKeyDown("left", () => {
+                player.move(-SPEED, 0)
+            })
+
+            onKeyDown("right", () => {
+                player.move(SPEED, 0)
+            })
+
+            onKeyDown("up", () => {
+                player.move(0, -SPEED)
+            })
+
+            onKeyDown("down", () => {
+                player.move(0, SPEED)
+            })
+
+
+        </script>
         <script src="script.js"></script>
     </body>
 </html>
