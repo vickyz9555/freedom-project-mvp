@@ -23,13 +23,23 @@
             // Start kaboom
             kaboom({
                 background: [ 0, 200, 255 ],
-            });
+            })
 
 
-            loadSprite("coin", "/sprites/coin.png")
-            loadSprite("key", "/sprites/key.png")
-            loadSprite("koala", "/sprites/koala.png")
-            loadSprite("owl", "/sprites/owl.png")
+            loadSprite("coin", "/freedom-project-mvp/sprites/coin.png")
+            loadSprite("key", "/freedom-project-mvp/sprites/key.png")
+            loadSprite("koala", "/freedom-project-mvp/sprites/koala.png")
+            loadSprite("owl", "/freedom-project-mvp/sprites/owl.png")
+            loadSprite("owl", "/freedom-project-mvp/sprites/door.png")
+            loadSprite("owl", "/freedom-project-mvp/sprites/block.png")
+
+
+            const player = add([
+                sprite("koala"),
+                pos(50, 50),
+                rotate(0),
+                area(),
+            ])
 
             const SPEED = 300
 
@@ -50,6 +60,66 @@
             })
 
 
+            for (let i = 0; i < 30; i++) {
+
+            const x = rand(width())
+            const y = rand(height())
+
+            add([
+                sprite("coin"),
+                pos(x, y),
+                area(),
+                "enemy",
+            ])
+            }
+
+
+
+            player.onCollide("enemy", (enemy) => {
+                destroy(enemy)
+            })
+
+
+
+            // add([
+            //     sprite("block"),
+            //     pos(0, ),
+            //     area(),
+            //     solid(),
+            // ])
+
+
+
+
+            // const levels = [
+            //     [
+            //         "===================",
+            //         "=                 =",
+            //         "=                 =",
+            //         "=                 =",
+            //         "=                 =",
+            //         "===================",
+            //     ],
+            // ]
+
+
+            // addLevel(levels[levelIdx], {
+            //     width: 64,
+            //     height: 64,
+            //     pos: vec2(64, 64),
+            //     "=": () => [
+            //         sprite("block"),
+            //         area(),
+            //         solid(),
+            //     ],
+            // ]
+
+
+
+
+
+
+        </script>
         </script>
         <script src="script.js"></script>
     </body>
