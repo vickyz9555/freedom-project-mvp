@@ -30,8 +30,8 @@
             loadSprite("key", "/freedom-project-mvp/sprites/key.png")
             loadSprite("koala", "/freedom-project-mvp/sprites/koala.png")
             loadSprite("owl", "/freedom-project-mvp/sprites/owl.png")
-            loadSprite("owl", "/freedom-project-mvp/sprites/door.png")
-            loadSprite("owl", "/freedom-project-mvp/sprites/block.png")
+            loadSprite("door", "/freedom-project-mvp/sprites/door.png")
+            loadSprite("block", "/freedom-project-mvp/sprites/block.png")
 
 
             const player = add([
@@ -39,6 +39,7 @@
                 pos(50, 50),
                 rotate(0),
                 area(),
+                // solid(),
             ])
 
             const SPEED = 300
@@ -74,19 +75,13 @@
             }
 
 
-
             player.onCollide("enemy", (enemy) => {
                 destroy(enemy)
             })
 
 
 
-            // add([
-            //     sprite("block"),
-            //     pos(0, ),
-            //     area(),
-            //     solid(),
-            // ])
+
 
 
 
