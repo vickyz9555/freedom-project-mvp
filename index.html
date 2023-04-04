@@ -17,8 +17,9 @@
 
         <!-- JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script type="module">
-            import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs"
+        <script src="https://unpkg.com/kaboom/dist/kaboom.js"></script>
+
+        <script>
 
             // Start kaboom
             kaboom({
@@ -26,12 +27,12 @@
             })
 
 
-            loadSprite("coin", "/freedom-project-mvp/sprites/coin.png")
-            loadSprite("key", "/freedom-project-mvp/sprites/key.png")
-            loadSprite("koala", "/freedom-project-mvp/sprites/koala.png")
-            loadSprite("owl", "/freedom-project-mvp/sprites/owl.png")
-            loadSprite("door", "/freedom-project-mvp/sprites/door.png")
-            loadSprite("block", "/freedom-project-mvp/sprites/block.png")
+            loadSprite("coin", "sprites/coin.png")
+            loadSprite("key", "sprites/key.png")
+            loadSprite("koala", "sprites/koala.png")
+            loadSprite("owl", "sprites/owl.png")
+            loadSprite("door", "sprites/door.png")
+            loadSprite("block", "sprites/block.png")
 
 
             const player = add([
